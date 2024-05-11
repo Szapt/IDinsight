@@ -12,25 +12,35 @@ actor Areas {
 		documento : Text;
 		nacionalidad : Text;
 		fechaNacimiento : Text;
+		antecedentes : Text;
+		comentarios : Text;
 	};
 
-	type areaID = Nat32;
-	stable var areaID : areaID = 0;
+	type Id = Text;
 
 	//declarar la lista de los usuarios
-	let listaUsuario = HashMap.HashMap<Principal, Usuario>(0, Principal.equal, Principal.hash);
+	let listaUsuario = HashMap.HashMap<Text, Usuario>(0, Text.equal, Text.hash);
+	//let listaUsuario = HashMap.HashMap<Principal, Usuario>(0, Principal.equal, Principal.hash);
 
-	public query ({ caller }) func whoami() : async Principal {
-		return caller;
-	};
+	/*public query ({ caller }) func whoami() : async Principal {
+        return caller;
+    };*/
 
 	//registro de usuarios
-	public shared (msg) func crearArea(usuario : Usuario) : async Usuario {
-		let identity : Principal = msg.caller;
+	/*public shared (msg) func crearArea(usuario : Usuario) : async Usuario {
+        let identity : Principal = msg.caller;
 
-		listaUsuario.put(identity, usuario);
-		Debug.print("Nuevo usuario creado");
+        listaUsuario.put(identity, usuario);
+        Debug.print("Nuevo usuario creado");
+        return usuario;
+    };*/
+	public shared func crearUsario(usuario : Usuario, id : Id) : async Usuario {
+		listaUsuario.put(id, usuario);
+		Debug.print("Nuevo usuario creado con el id" #id);
 		return usuario;
+	};
+	public query func consultarUsuari(id : Id) : async ?Usuario {
+		return listaUsuario.get(id);
 	};
 
 	/*public query func obtieneAreas () : async [(Text, Usuario)] {
