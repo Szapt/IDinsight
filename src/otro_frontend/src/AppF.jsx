@@ -15,7 +15,7 @@ function App() {
   const [areasICP] = useCanister("otro_backend");
 
 
-  async function  handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     // const name = event.target.elements.name.value;
     const areas = await areasICP.obtieneAreas();
@@ -23,12 +23,12 @@ function App() {
     return false;
   }
 
-  
+
 
   return (
-   
+
     <main>
-       <div className="min-h-screen">
+      <div className="min-h-screen">
         <header className="relative flex justify-start items-center p-4 border-b border-gray-600">
           <img src={logo} width="80" alt="logo" />
           <div className="absolute top-2 right-2">
@@ -50,7 +50,7 @@ function App() {
     </main>
   );
 
-  
+
 }
 
 const client = createClient({
