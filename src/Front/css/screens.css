@@ -1,0 +1,34 @@
+#home{
+    display: block;
+}
+#registro{
+    display: none;
+}
+#verificacion{
+    display: none;
+}
+#historial{
+    display: none;
+}
+#menuBar{
+    display: none;
+}
+#menuBarImg{
+    display: block;
+}
+#menuBarImg1{
+    display: none;
+}
+
+#menuBarV{
+    display: none;
+}
+#menuBarImgV{
+    display: block;
+}
+#menuBarImg1V{
+    display: none;
+}
+#newComent{
+    display: none;
+}

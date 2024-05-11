@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/screens.css" rel="stylesheet" type="text/css" />
+    <link href="css/menuBar.css" rel="stylesheet" type="text/css" />
+    <title>IDinsight</title>
+  </head>
+  <body>
+    <img src="images/fondo1.png" id="fondo" />
+    <img src="images/fondo1.png" id="fondo1" />
+
+    <!--Pantalla inicio-->
+    <div id="home">
+      <aside id="izq">
+        <img src="images/logo1.png" id="logo" />
+      </aside>
+      <aside id="der">
+        <br /><br />
+        <button onclick="mostrar('verificacion', 'home')">Verificación</button>
+        <br /><br />
+        <button onclick="mostrar('registro', 'home')">Registro</button>
+        <br /><br />
+        <button onclick="mostrar('registro', 'home')">Pagos</button>
+      </aside>
+    </div>
+
+    <!--Pantalla verificación-->
+    <div id="verificacion">
+      <div id="verificacionSections">
+        <img src="images/huella-dactilar.png" id="imgHuella" />
+        <button
+          id="verificarButton"
+          onclick="window.open('https://identity.internetcomputer.org/')"
+        >
+          Verificar
+        </button>
+        <section id="vSection1">
+          <h1>Antecedentes</h1>
+          <textarea readonly></textarea>
+          <br /><br />
+        </section>
+        <section id="vSection2">
+          <label>Comentarios: </label><br />
+          <textarea id="coments" readonly> </textarea><br /><br />
+          <button id="addcoment" onclick="mostrar('newComent','vSection2')">
+            Añadir comentario
+          </button>
+        </section>
+        <section id="newComent">
+          <label>Nuevo comentario: </label><br />
+          <textarea> </textarea><br /><br />
+          <button
+            id="addcoment"
+            onclick="añadirComentario('vSection2','newComent')"
+          >
+            Añadir
+          </button>
+        </section>
+      </div>
+      <section id="menuBarV">
+        <button onclick="mostrarPrincipal('verificacion')" id="menuBarButton1V">
+          Home
+        </button>
+        <br />
+        <button
+          id="menuBarButton2V"
+          onclick="mostrar('registro', 'verificacion')"
+        >
+          Registro
+        </button>
+        <br />
+      </section>
+      <button id="menuButtonV" onclick="mostrarMenuBarV();">
+        <img id="menuBarImgV" src="images/menu.png" />
+        <img id="menuBarImg1V" src="images/menu1.png" />
+      </button>
+    </div>
+
+    <!--Pantalla registro-->
+    <div id="registro">
+      <section id="menuBar">
+        <button onclick="mostrarPrincipal('registro')" id="menuBarButton1">
+          Home
+        </button>
+        <br />
+        <button
+          id="menuBarButton2"
+          onclick="mostrar('verificacion', 'registro')"
+        >
+          Verificación
+        </button>
+      </section>
+      <button id="menuButton" onclick="mostrarMenuBar();">
+        <img id="menuBarImg" src="images/menu.png" />
+        <img id="menuBarImg1" src="images/menu1.png" />
+      </button>
+      <fieldset id="registroF">
+        <legend>Registro</legend>
+        <label>Nombre: </label><br />
+        <input type="text" /> <br /><br />
+        <label>Tipo de documento: </label><br />
+        <select>
+          <option>Cédula de ciudadanía</option>
+          <option>Tarjeta de identidad</option>
+          <option>Cédula de extranjería</option>
+          <option>Pasaporte</option></select
+        ><br /><br />
+        <label>Número de documento: </label><br />
+        <input type="text" /> <br /><br />
+        <label>Correo electrónico: </label><br />
+        <input type="email" /> <br /><br />
+        <button onclick="window.open('https://identity.internetcomputer.org/')">
+          Finalizar proceso
+        </button>
+        <br />
+        <div id="repRetirar" role="alert"></div>
+      </fieldset>
+    </div>
+
+    <script src="js/div.js"></script>
+  </body>
+</html>

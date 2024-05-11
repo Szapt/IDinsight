@@ -1,0 +1,185 @@
+* button{
+   cursor: pointer; 
+}
+.tab{
+    width: 500px;
+    height: 1000px;
+    overflow: auto;
+}
+body{
+    background-image: linear-gradient(to right, black, #5868bb);
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 472px;
+    padding-top: 80px;
+}
+#home{
+    position: absolute;
+    text-align: center;
+    line-height: 15%;
+}
+#verificacion{
+    text-align: center;
+}
+
+#verificacionSections{
+    position: absolute;
+    background-color: #D9D9D9;
+    width: 1000px;
+    height: 500px;
+    left: 180px;
+    top: 60px;
+}
+#vSection1{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 320px;
+    top: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;  
+}
+#vSection1 textarea{
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+}
+#vSection2{
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    left: 620px;
+    top: 120px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px; 
+}
+#vSection2 button{
+    position: absolute;
+    left: 110px;
+    height: 40px;
+    width: 180px;
+    background-color: #0b1031;
+    color: white;
+    
+}
+#newComent{
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    left: 620px;
+    top: 120px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px; 
+}
+#newComent button{
+    position: absolute;
+    left: 110px;
+    height: 40px;
+    width: 180px;
+    background-color: #0b1031;
+    color: white;
+    
+}
+#coments{
+    height: 200px;
+    margin-top: 20px;
+}
+#verificarButton{
+    position: absolute;
+    left: 101px;
+    top: 350px;
+    height: 40px;
+    width: 180px;
+    background-color: #0b1031;
+    color: white;
+}
+#historialSections{
+    position: absolute;
+    background-color: #D9D9D9;
+    width: 600px;
+    height: 500px;
+    left: 365px;
+    top: 60px;
+
+}
+#imgHuella {
+    height: 180px;
+    position: absolute;
+    left: 100px;
+    top: 130px;
+}
+
+#registro{
+    color: white;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;  
+}
+#registro fieldset{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 420px;
+    top: 110px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;  
+}
+#registro input{
+    height: 20px;
+}
+#registro select{
+    height: 25px;
+}
+#registro button{
+    height: 30px;
+}
+#logo{
+    position: absolute;
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 330px;
+    top: 150px;
+}
+#fondo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 230px;
+    opacity: 15%;
+}
+#fondo1{
+    position: absolute;
+    top: 405px;
+    left: 0;
+    right: 0;
+    height: 220px;
+    opacity: 15%;
+}
+#home button{
+    float: right;
+    background-color: rgb(198, 195, 211);
+    color: rgb(32, 28, 87);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    width: 300px;
+    height: 70px;
+    margin: 2px;
+}
+aside#izq{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 200px;
+    height: 453px;
+}
+aside#der{
+    position: absolute;
+    left: 770px;
+    top: 240px;
+}
